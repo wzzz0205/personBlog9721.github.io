@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./base.css">
+    <style>
+        .container {
+            width: 90%;
+            margin-left: 5%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 45%;
+            margin: 5px 20px 10px 0;
+            border: 1px solid rgb(134, 175, 166);
+        }
+
+        .boxHeader {
+            background-color: rgb(74, 158, 228);
+            height: 25px;
+            line-height: 25px;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .boxHeader span {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .boxMain {
+            display: flex;
+            justify-content: space-around;
+            padding: 5px;
+        }
+
+        .boxImg img{
+            width: 242px;
+            height: 178px;
+        }
+
+        .text {
+            margin: 0 10px 0 5px;
+        }
+
+        .header {
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            background-color: rgba(249, 249, 249, 0.812);
+        }
+
+        .login {
+            margin-left: 10%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .headerRight {
+            float: right;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .headerRight img {
+            width: 18px;
+            height: 18px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .nav {
+            height: 120px;
+            background-color: #fff;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 23%;
+            margin-top: 30px;
+            margin-left: 150px;
+        }
+
+        .logoRight {
+            height: 55px;
+            display: flex;
+            align-items: start;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .dw {
+            display: block;
+        }
+
+        .navRight {
+            position: absolute;
+            right: 0;
+            top: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 213px;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: center;
+        }
+
+        .nav2 {
+            height: 40px;
+            background-color: rgb(9, 164, 148);
+        }
+
+        .aList {
+            margin-left: 15%;
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .aList a {
+            line-height: 40px;
+            color: #fff;
+            width: 100px;
+            text-align: center;
+        }
+
+        .aList a:hover {
+            color: #fff;
+            background-color: black;
+            opacity: .3;
+        }
+
+
+        .banners {
+            position: relative;
+            overflow: hidden;
+            width: 800px;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+
+        .images {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 500%;
+        }
+
+
+        .images li {
+            float: left;
+        }
+
+        .banners img {
+            width: 800px;
+            height: 400px;
+        }
+
+        .prev,
+        .next {
+            display: none;
+            position: absolute;
+
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            background: rgba(0, 0, 0, .3);
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .prev {
+            left: 0;
+
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+        }
+
+
+        .next {
+            right: 0;
+
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+
+
+        .dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -35px;
+            height: 13px;
+            background: rgba(255, 255, 255, .3);
+            border-radius: 7px;
+        }
+
+
+        .dots li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin: 3px;
+        }
+
+
+        .dots .active {
+            background-color: #ff5000;
+        }
+
+        .headerTitle {
+            margin-left: 578px;
+            margin-top: -70px;
+            font-size: 38px;
+        }
+
+        .footer{
+            height: 120px;
+            background-color: rgb(47,79,79);
+            padding: 40px 0 0 50%;
+            box-sizing: border-box;
+        }
+
+        .footer span{
+            display: block;
+            color: #fff;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="login">
+            <span>登录</span>
+            <span style="margin: 0 5px;">|</span>
+            <span>注册</span>
+        </div>
+        <div class="headerRight">
+            <span style="margin-right: 10px;">我的收藏</span>
+            <span style="margin-right: 2px;">退出</span>
+            <img src="./images/退出编辑.png" alt="">
+        </div>
+    </div>
+    <div class="nav">
+        <div class="logo">
+            <img style="width: 220px;height: 85px;" src="./images/logo.png" alt="">
+            <div class="logoRight">
+                <span style="display: block;">北京</span>
+                <div class="dw">
+                    <img style="width: 15px;height: 15px;" src="./images/定位.png" alt="">
+                    <span>当前城市</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="headerTitle">医学上线上学习平台</div>
+
+        <div class="navRight">
+            <img style="width: 50px;height: 50px;" src="./images/电话.png" alt="">
+            <div class="contact">
+                <span style="display: block;">客服热线(9.00-6.00)</span>
+                <span style="display: block;">18514000360</span>
+            </div>
+        </div>
+    </div>
+    <div class="nav2">
+        <div class="aList">
+            <a href="">首页</a>
+            <a href="">理论学习</a>
+            <a href="">随手插柳</a>
+            <a href="">你问我答</a>
+            <a href="">热点话题</a>
+            <a href="">线上自习室</a>
+        </div>
+    </div>
+
+    <div class="banners">
+        <ul class="images">
+
+            <li>
+                <a href="#"><img src="./images/Highlights.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/Home.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/TopStory.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/Updates.png" alt=""></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/5.png" alt=""></a>
+            </li>
+        </ul>
+        <!-- 左箭头 -->
+        <a href="javascript:;" class="prev"> &lt;</a>
+        <!-- 右箭头 -->
+        <a href="javascript:;" class="next"> &gt;</a>
+        <!-- 小圆点 -->
+        <ul class="dots">
+
+        </ul>
+    </div>
+
+    <h2 style="margin-left: 5%;color: rgb(221,190,84);font-size: 28px;">核心模块</h2>
+    <div class="container">
+        <div class="box" style="margin-top: 20px;">
+            <div class="boxHeader">
+                <span>理论学习</span>
+            </div>
+            <div class="boxMain">
+                <div class="text">
+                    <p>在“理论学习”区收纳有丰富的医学资料，各种医学教材、医学书籍、医学课程影像，使用者可在这里进行系统的知识学习。除了方便个人的学习，产品还方便使用者以学院、班级或小组为单位进行圈内学习，如在线上直播间，使用者可与伙伴相约进入学习，既增进团队沟通和协作能力，也为学习增加“氛围感”和“趣味性”。
+                    </p>
+                </div>
+                <div class="boxImg">
+                    <img src="./images/img1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="box" style="margin-top: 20px;">
+            <div class="boxHeader">
+                <span>随手插柳</span>
+            </div>
+            <div class="boxMain">
+                <div class="text">
+                    <p>在“随手插柳”区，使用者可以发表自己的学习总结或生活经验，是帮助他人和获得自我认同感的平台。无论其身处何地，都能打开网页“面对面”地进行“互助式”学习。在“你问我答”区，使用者可提出自己困惑的医学问题，以寻求其他使用者的解答，或可发布自己在校园生活中的苦恼，在他人的经验中得到启发，也可为他人的困惑排忧解难。
+                    </p>
+                </div>
+                <div class="boxImg">
+                    <img src="./images/img1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="boxHeader">
+                <span>你问我答</span>
+            </div>
+            <div class="boxMain">
+                <div class="text">
+                    <p>在“你问我答”区，使用者可提出自己困惑的医学问题，以寻求其他使用者的解答，或可发布自己在校园生活中的苦恼，在他人的经验中得到启发，也可为他人的困惑排忧解难。
+                    </p>
+                </div>
+                <div class="boxImg">
+                    <img src="./images/img1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="boxHeader">
+                <span>热点话题</span>
+            </div>
+            <div class="boxMain">
+                <div class="text">
+                    <p>在“热点话题”区，不论是社会医学新闻还是科研成果报告，使用者都可第一时间了解近期热点，并在此参与讨论发表自己的看法。
+                    </p>
+                </div>
+                <div class="boxImg">
+                    <img src="./images/img1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="boxHeader">
+                <span>线上自习室</span>
+            </div>
+            <div class="boxMain">
+                <div class="text">
+                    <p>在“线上自习室”区，每个使用者都可以发起自己的直播学习，每个使用者也都可以进入直播间以直播间评论区互动和屏幕前学习的方式与主播互相陪伴监督学习。
+                    </p>
+                </div>
+                <div class="boxImg">
+                    <img src="./images/img1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="boxHeader">
+                <span>随手插柳</span>
+            </div>
+            <div class="boxMain">
+                <div class="text">
+                    <p>在“随手插柳”区，使用者可以发表自己的学习总结或生活经验，是帮助他人和获得自我认同感的平台。无论其身处何地，都能打开网页“面对面”地进行“互助式”学习。在“你问我答”区，使用者可提出自己困惑的医学问题，以寻求其他使用者的解答，或可发布自己在校园生活中的苦恼，在他人的经验中得到启发，也可为他人的困惑排忧解难。
+                    </p>
+                </div>
+                <div class="boxImg">
+                    <img src="./images/img1.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+    <div class="footer">
+        <span>版权所有</span>
+    </div>
+</body>
+<script>
+    window.addEventListener('load', function () {
+
+        var prev = document.querySelector('.prev');
+        var next = document.querySelector('.next');
+        var banners = document.querySelector('.banners')
+
+        // 鼠标经过，显示左右按钮
+        banners.addEventListener('mouseenter', function () {
+            prev.style.display = 'block';
+            next.style.display = 'block';
+            clearInterval(timer);
+            timer = null;
+        });
+        // 鼠标离开，隐藏左右按钮
+        banners.addEventListener('mouseleave', function () {
+            prev.style.display = 'none';
+            next.style.display = 'none';
+            timer = setInterval(function () {
+
+                next.click();
+            }, 2000);
+        });
+        //  动态生成小圆圈 
+        var images = document.querySelector('.images');
+        var dots = document.querySelector('.dots');
+        var banners_width = banners.offsetWidth;
+        for (var i = 0; i < images.children.length; i++) {
+            var li = document.createElement('li');
+
+            li.setAttribute('index', i);
+            dots.appendChild(li);
+
+            li.addEventListener('click', function () {
+                for (var i = 0; i < dots.children.length; i++) {
+                    dots.children[i].className = '';
+                }
+                this.className = 'active';
+
+                var index = this.getAttribute('index');
+
+                num = index;
+                circle = index;
+                animate(focus, -index * banners_width);
+            })
+        }
+
+        dots.children[0].className = 'active';
+
+        var first = images.children[0].cloneNode(true);
+        images.appendChild(first);
+
+
+        var num = 0;
+
+        var circle = 0;
+        next.addEventListener('click', function () {
+
+            if (num == images.children.length - 1) {
+                images.style.left = 0;
+                num = 0;
+            }
+            num++;
+            animate(images, -num * banners_width);
+
+            circle++;
+            if (circle == dots.children.length) {
+                circle = 0;
+            }
+            circleChange();
+        })
+        //左侧按钮点击事件
+        prev.addEventListener('click', function () {
+
+            if (num == 0) {
+                num = images.children.length - 1;
+                images.style.left = -num * banners_width + 'px';
+            }
+            num--;
+            animate(images, -num * banners_width)
+
+            circle--;
+            circle = circle < 0 ? dots.children.length - 1 : circle;
+
+            circleChange();
+        })
+        function circleChange() {
+            for (var i = 0; i < dots.children.length; i++) {
+                dots.children[i].className = '';
+            }
+            dots.children[circle].className = 'active';
+        }
+        var timer = setInterval(function () {
+
+            next.click();
+        }, 2000);
+
+    })
+
+
+    function animate(obj, target, callback) {
+
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function () {
+            var step = (target - obj.offsetLeft) / 10;
+            step = step > 0 ? Math.ceil(step) : Math.floor(step);
+            if (obj.offsetLeft == target) {
+
+                clearInterval(obj.timer)
+
+                if (callback) {
+                    callback();
+                }
+
+            }
+            //把每次加1这个步长值改为一个慢慢变小的值
+            obj.style.left = obj.offsetLeft + step + 'px';
+        }, 15);
+    }
+</script>
+
+</html>
