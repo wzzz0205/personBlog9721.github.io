@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人网站</title>
+    <link rel="stylesheet" href="./base.css">
+    <style>
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(246, 246, 246, 0.673);
+        }
+
+        .header {
+            display: flex;
+            height: 40px;
+            padding: 10px 5px 30px 5px;
+            position: relative;
+            line-height: 40px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .headerLeft {
+            margin: 10px 0 0 10px;
+        }
+
+        .headerLeft img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .headerLeft span {
+            font-size: 28px;
+            font-weight: bold;
+            color: rgb(131, 83, 34);
+        }
+
+        .headerRight {
+            line-height: 40px;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+
+        .headerRight a {
+            color: rgb(131, 83, 34);
+            font-size: 22px;
+            margin-right: 10px;
+        }
+
+        .row2 {
+            margin-left: 25%;
+            margin-top: -70px;
+        }
+
+        .row2 span {
+            color: rgb(131, 83, 34);
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .row2 img {
+            width: 200px;
+            height: 200px;
+            margin-left: 20px;
+            border-radius: 50%;
+            border: 4px solid purple;
+        }
+
+        .row3 {
+            margin-left: 25%;
+            margin-top: 30px;
+        }
+
+        .row3 p {
+            color: rgb(69, 69, 69);
+            font-size: 40px;
+            width: 630px;
+            line-height: 60px;
+        }
+
+        .row4 {
+            margin: 20px 0 0 25%;
+        }
+
+        .row5 {
+            margin: 50px 0 0 25%;
+        }
+
+        .itemBox {
+            height: 180px;
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .item {
+            width: 50%;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .item img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid rgb(131, 83, 34);
+        }
+
+        .itemText {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin-left: 10px;
+        }
+
+        .itemText1 {
+            color: rgb(131, 83, 34);
+            line-height: 30px;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .itemText2 {
+            font-weight: 600;
+            font-size: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="headerLeft">
+                <img src="./images/img1.png" alt="">
+                <span>Yao's World</span>
+            </div>
+            <div class="headerRight">
+                <a style="text-decoration: underline;" href="">About</a>
+                <a href="">Posts</a>
+                <a href="">Tags</a>
+            </div>
+        </div>
+        <div class="row2">
+            <span>About</span>
+            <img src="./images/老鹰.png" alt="">
+        </div>
+        <div class="row3">
+            <p>Of course, you want to check the About first!</p>
+        </div>
+        <div class="row4">
+            <p style="line-height: 50px;">I'm Yao.I'm originally from <u>Taiyuan</u> and currently resides in
+                <u>Shanghai</u>. </p>
+            <p>我是姚，现居上海的太原人。</p>
+        </div>
+        <div class="row5">
+            <p>Favorite channels:</p>
+            <div class="itemBox">
+                <div class="item">
+                    <img src="./images/老鹰.png" alt="">
+                    <div class="itemText">
+                        <p class="itemText1">Thomas Flight</p>
+                        <p class="itemText2">All about cinema</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/老鹰.png" alt="">
+                    <div class="itemText">
+                        <p class="itemText1">Thomas Flight</p>
+                        <p class="itemText2">All about cinema</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/老鹰.png" alt="">
+                    <div class="itemText">
+                        <p class="itemText1">Thomas Flight</p>
+                        <p class="itemText2">All about cinema</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/老鹰.png" alt="">
+                    <div class="itemText">
+                        <p class="itemText1">Thomas Flight</p>
+                        <p class="itemText2">All about cinema</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
